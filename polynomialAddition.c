@@ -68,59 +68,59 @@ struct Node * addPolynomials(struct Node * poly1 , struct Node *poly2) {
     return result ;
 }
 
-struct Node * subPolynomials(struct Node * poly1 , struct Node *poly2) {
-    struct Node * result = NULL ; 
-    struct Node ** tail = &result ; 
+// struct Node * subPolynomials(struct Node * poly1 , struct Node *poly2) {
+//     struct Node * result = NULL ; 
+//     struct Node ** tail = &result ; 
 
-    while (poly1 != NULL && poly2 != NULL ) {
-        if (poly1->exp == poly2->exp) {
-            insert(tail , poly1->coeff - poly2->coeff , poly1->exp) ; 
-            poly1 = poly1->next ; 
-            poly2 = poly2->next ; 
-        }
-        else if (poly1->exp > poly2->exp) {
-            insert(tail , poly1->coeff , poly1->exp) ; 
-            poly1 = poly1->next ; 
-        }
-        else if (poly1->exp < poly2->exp) {
-            insert(tail , -poly2->coeff , poly2->exp) ; 
-            poly2 = poly2->next ; 
-        }
+//     while (poly1 != NULL && poly2 != NULL ) {
+//         if (poly1->exp == poly2->exp) {
+//             insert(tail , poly1->coeff - poly2->coeff , poly1->exp) ; 
+//             poly1 = poly1->next ; 
+//             poly2 = poly2->next ; 
+//         }
+//         else if (poly1->exp > poly2->exp) {
+//             insert(tail , poly1->coeff , poly1->exp) ; 
+//             poly1 = poly1->next ; 
+//         }
+//         else if (poly1->exp < poly2->exp) {
+//             insert(tail , -poly2->coeff , poly2->exp) ; 
+//             poly2 = poly2->next ; 
+//         }
 
-        tail = &((*tail)->next) ;
-    }
+//         tail = &((*tail)->next) ;
+//     }
 
-    while (poly1 != NULL) {
-        insert(tail , poly1->coeff , poly1->exp) ; 
-        poly1 = poly1->next ; 
-        tail = &((*tail)->next) ;
-    }
+//     while (poly1 != NULL) {
+//         insert(tail , poly1->coeff , poly1->exp) ; 
+//         poly1 = poly1->next ; 
+//         tail = &((*tail)->next) ;
+//     }
 
-    while (poly2 != NULL) {
-        insert(tail , poly2->coeff , poly2->exp) ; 
-        poly2 = poly2->next ; 
-        tail = &((*tail)->next) ;
-    }
+//     while (poly2 != NULL) {
+//         insert(tail , poly2->coeff , poly2->exp) ; 
+//         poly2 = poly2->next ; 
+//         tail = &((*tail)->next) ;
+//     }
 
-    return result ;
-}
+//     return result ;
+// }
 
-struct Node* multiplyPolynomials(struct Node* poly1, struct Node* poly2) {
-    struct Node* result = NULL;
+// struct Node* multiplyPolynomials(struct Node* poly1, struct Node* poly2) {
+//     struct Node* result = NULL;
 
-    struct Node *tempResult = NULL ;
-    struct Node *tempPoly = NULL ;
+//     struct Node *tempResult = NULL ;
+//     struct Node *tempPoly = NULL ;
 
-    while (tempPoly != NULL ) {
-        struct Node * tempPoly = poly1 ; 
+//     while (tempPoly != NULL ) {
+//         struct Node * tempPoly = poly1 ; 
 
-        while (tempPoly )
+//         while (tempPoly )
         
         
-    }
+//     }
 
-    return result;
-}
+//     return result;
+// }
  
 void display(struct Node * poly ) {
     while ( poly != NULL ) {
@@ -152,9 +152,9 @@ int main(){
     printf("-------------the addition is----------- \n\n") ; 
     struct Node * addition = addPolynomials(poly1, poly2) ; 
     display(addition) ;
-    printf("-------------the substraction is-------- \n\n") ; 
-    struct Node * subs = subPolynomials(poly1, poly2) ; 
-    display(subs) ;
+    // printf("-------------the substraction is-------- \n\n") ; 
+    // struct Node * subs = subPolynomials(poly1, poly2) ; 
+    // display(subs) ;
 
     
 
