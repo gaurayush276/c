@@ -11,7 +11,7 @@ void insertionSort(int arr[], int n) {
             arr[j + 1] = arr[j];
             j--;
         }
-        printf("%d " , j ) ; 
+        // printf("%d " , j ) ; 
 
         arr[j + 1] = key;
     }
