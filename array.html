@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>   
+<body>
+
+    <p id="demo"  onclick="call()">  click on me for array demo</p>
+
+    <p id="answer">Answer</p>
+    
+</body>
+
+<script>
+    let demo= document.getElementById("demo") ; 
+    let ans = document.getElementById("answer") ; 
+    function call() {
+        let n = parseInt(prompt("enter the size of array ")) ; 
+        let arr =[]; 
+         
+        for ( let i = 0 ; i < n ; i++ ) {
+            arr[i] = parseInt(prompt("enter the number ")) ;
+        }
+
+        demo.innerText = arr ;
+        let largest = arr[0] ; 
+        for ( let i = 0 ; i< n ; i++ ) {
+            if ( largest < arr[i])
+            largest = arr[i] ;
+        }
+        ans.innerText = largest ; 
+
+    }
+</script>
+</html>
